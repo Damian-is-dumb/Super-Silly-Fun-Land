@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Super Silly Fun Land — Official Portal</title>
+  <style>
+    :root{
+      --bg:#fff8fb;
+      --card:#ffffff;
+      --accent:#ff8fb1;
+      --accent-2:#ffd36b;
+      --muted:#6b6b6b;
+      --glass: rgba(255,255,255,0.6);
+      --shadow: 0 6px 18px rgba(20,20,40,0.06);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#222;transition:background 0.5s ease}
+    header{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:28px 20px;color:#241224;transition:all 0.5s ease}
+    .wrap{max-width:1100px;margin:0 auto}
+    .brand{display:flex;align-items:center;gap:16px}
+    .logo{width:64px;height:64px;border-radius:12px;background:rgba(255,255,255,0.5);display:grid;place-items:center;font-weight:700;box-shadow:var(--shadow);transition:all 0.5s ease}
+    nav{margin-top:12px}
+    nav a{margin-right:14px;text-decoration:none;color:#241224;font-weight:600;opacity:0.95;transition:color 0.3s ease}
+    .hero{display:flex;gap:20px;align-items:center;padding:36px 0;transition:all 0.5s ease}
+    .hero .left{flex:1}
+    .hero h1{margin:0;font-size:34px;line-height:1.04}
+    .hero p{margin:10px 0 0;color:var(--muted);transition:color 0.3s ease}
+    .hero .cta{margin-top:18px}
+    .btn{background:#241224;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;transition:all 0.3s ease}
+
+    main{padding:30px 0}
+    section.card{background:var(--card);border-radius:12px;padding:18px;margin-bottom:18px;box-shadow:var(--shadow);transition:all 0.5s ease}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .leader{display:flex;align-items:center;gap:14px}
+    .portrait{width:74px;height:74px;border-radius:12px;background:linear-gradient(180deg,#fff,#f6f6f9);display:grid;place-items:center;font-weight:700;transition:all 0.3s ease}
+    footer{padding:18px 0;color:var(--muted);font-size:13px;transition:all 0.5s ease}
+
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+      .hero{flex-direction:column;align-items:flex-start}
+    }
+
+    a:focus{outline:3px solid rgba(36,18,36,0.12);outline-offset:4px;border-radius:8px}
+
+    /* ARG flickers and distortions */
+    .flicker{animation:flick 1s steps(3) infinite;}
+    @keyframes flick{50%{opacity:0.08;filter:blur(1px) saturate(1.4)}}
+    .triangle{width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:14px solid rgba(36,18,36,0.06);display:inline-block;vertical-align:middle;margin-left:8px;transition:all 0.5s ease}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo">SSFL</div>
+        <div>
+          <div style="font-weight:800">Super Silly Fun Land</div>
+          <div class="muted small">Official National Portal — Serving the People, Preserving the Light</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#home" data-target="home">Home</a>
+        <a href="#government" data-target="government">Government</a>
+        <a href="#tourism" data-target="tourism">Tourism</a>
+        <a href="#citizenship" data-target="citizenship">Citizenship</a>
+        <a href="#news" data-target="news">News</a>
+        <a href="#contact" data-target="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- HOMEPAGE -->
+    <section id="home" class="card">
+      <div class="hero">
+        <div class="left">
+          <h1>Welcome to <strong>Super Silly Fun Land</strong></h1>
+          <p class="muted">One Nation. One Smile. One Light. — Under the guidance of President Ren, Super Silly Fun Land prospers in devotion… or so it seems.</p>
+
+          <div class="cta">
+            <a class="btn" href="#citizenship" data-target="citizenship">Apply for Citizenship</a>
+            <span style="margin-left:12px;color:var(--muted);font-weight:700">•</span>
+            <a style="margin-left:12px;color:#241224;font-weight:700;text-decoration:none" href="#news" data-target="news">Latest Announcements</a>
+          </div>
+        </div>
+        <div class="right">
+          <div style="width:280px;height:160px;border-radius:12px;background:linear-gradient(135deg,#fff6f8,#fffaf0);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)" id="beacon">
+            <div style="text-align:center">
+              <div style="font-size:22px;font-weight:800">The National Beacon</div>
+              <div class="muted small" style="margin-top:8px">Providing light and stability… or watching closely.</div>
+              <div style="margin-top:12px;" aria-hidden><span class="triangle" id="eye-symbol"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:18px" class="small muted">Serving the citizens of laughter since the Founding Illumination, 2003.</div>
+    </section>
+
+    <!-- GOVERNMENT, TOURISM, CITIZENSHIP, NEWS, CONTACT sections remain as in original official site -->
+
+    <footer class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="muted small">© Super Silly Fun Land Government 2025 • Ministry of Radiance</div>
+        <div class="muted small">All citizens are equal under the Light. <span style="opacity:0.6">▴</span></div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('nav a, a[data-target]').forEach(el=>{
+      el.addEventListener('click',e=>{
+        e.preventDefault();
+        const t = el.getAttribute('data-target') || (el.getAttribute('href')||'').replace('#','');
+        if(!t) return;
+        document.getElementById(t).scrollIntoView({behavior:'smooth'});
+      })
+    });
+
+    // Citizenship form (playful confirmation)
+    const form = document.getElementById('citizen-form');
+    if(form){
+      form.addEventListener('submit',e=>{
+        e.preventDefault();
+        const resp = document.getElementById('citizen-response');
+        resp.textContent = 'Thank you. Your devotion has been recorded. Await further observation.';
+        const id = 'SSFL-' + Math.floor(Math.random()*900000 + 100000);
+        setTimeout(()=>{resp.textContent += ' Citizen ID: ' + id;},800);
+      });
+    }
+
+    // Contact form (local only)
+    const contact = document.getElementById('general-contact');
+    if(contact){
+      contact.addEventListener('submit',e=>{
+        e.preventDefault();
+        document.getElementById('contact-response').textContent = 'Message received. The Council is watching.';
+      });
+    }
+
+    // ARG flicker and eye effects
+    const FLICKER_ENABLED = true;
+    function maybeFlicker(){
+      if(!FLICKER_ENABLED) return;
+      const h = document.querySelector('#home .muted');
+      if(Math.random() < 0.15){
+        h.classList.add('flicker');
+        const orig = h.textContent;
+        h.textContent = orig.replace('light','watching').replace('devotion','obedience');
+        setTimeout(()=>{h.classList.remove('flicker');h.textContent = orig;},1200);
+      }
+      const eye = document.getElementById('eye-symbol');
+      if(eye && Math.random() < 0.1){
+        eye.style.transform = 'rotate(' + (Math.random()*30-15) + 'deg) scale(' + (0.8+Math.random()*0.4) + ')';
+      } else if(eye){
+        eye.style.transform = 'rotate(0deg) scale(1)';
+      }
+    }
+    setInterval(maybeFlicker,1800);
+
+    // Secret console hints
+    console.log('%c[Inner Circle Log]: Observation continues. Curiosity is noted.','color:red;font-weight:bold');
+
+    // Hidden HTML comment clue
+    document.body.insertAdjacentHTML('beforeend','<!-- Q3VyaW9zaXR5IGFyaXNlLCBsaWdodCBzZWVrcyB0aGUgZ2F0ZXMu -->');
+  </script>
+</body>
+</html>
